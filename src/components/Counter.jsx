@@ -19,7 +19,7 @@ export const Counter = (props) => {
     const [step, setStep] = useState(1)
 
     const onCountClick = () => {
-        const newCount = count - step
+        const newCount = count + step
         setCount(newCount)
         props.onCountChange(newCount)
     }
