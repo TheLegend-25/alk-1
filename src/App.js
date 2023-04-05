@@ -2,6 +2,9 @@ import './App.css';
 import { Counter } from "./components/Counter";
 import { useState } from "react";
 import { CarContainer } from "./components/CarContainer";
+import { MouseMove } from "./components/MouseMove";
+import { ColorPicker } from './excercises/color-picker/ColorPicker';
+import { BoxesContainer } from './excercises/color-boxes/BoxesContainer';
 
 const ITEMS = [
     {id: 'a1', no: 1},
@@ -28,10 +31,13 @@ function App() {
   if (isLoading) {
       return <div>Loading...</div>
   }
+  return<BoxesContainer/>
+  return<ColorPicker/>
+  return <MouseMove />
 
   return (
     <div className="App">
-        <CarContainer />
+    <CarContainer />
       <hr />
       Counter in parent: {counterStep}
       <input value={firstCounterName} onChange={event => setFirstCounterName(event.target.value)}/>
